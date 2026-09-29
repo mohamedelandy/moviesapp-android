@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Cinema Clapper / Screen Rounded Outer Frame -->
+    <path
+        android:pathData="M30,30h48c4.4,0 8,3.6 8,8v32c0,4.4 -3.6,8 -8,8h-48c-4.4,0 -8,-3.6 -8,-8v-32c0,-4.4 3.6,-8 8,-8z"
+        android:strokeWidth="2.5"
+        android:strokeColor="#55FFFFFF">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="22"
+                android:startY="30"
+                android:endX="86"
+                android:endY="78">
+                <item android:offset="0.0" android:color="#33FFFFFF" />
+                <item android:offset="1.0" android:color="#10FFFFFF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Cinema Projector / Film Reel Top Perforations -->
+    <path
+        android:fillColor="#F2542D"
+        android:pathData="M34,34h5v3h-5z M45,34h5v3h-5z M56,34h5v3h-5z M67,34h5v3h-5z" />
+    <!-- Glowing Red Play Triangle -->
+    <path
+        android:pathData="M48,44 L66,54 L48,64 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="48"
+                android:startY="44"
+                android:endX="66"
+                android:endY="64">
+                <item android:offset="0.0" android:color="#FFFF3B47" />
+                <item android:offset="0.5" android:color="#FFF2542D" />
+                <item android:offset="1.0" android:color="#FFB30710" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Spatial Audio Arc Rings -->
+    <path
+        android:pathData="M69,45 C73,48 73,60 69,63"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeColor="#A855F7" />
+    <path
+        android:pathData="M73,40 C79,45 79,63 73,68"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeColor="#38BDF8" />
+</vector>

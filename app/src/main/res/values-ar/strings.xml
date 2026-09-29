@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">معرض أفلام سينمائي</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_explore">استكشاف</string>
+    <string name="nav_spatial">الصوت المكاني</string>
+    <string name="nav_downloads">التنزيلات</string>
+    <string name="nav_myspace">مساحتي</string>
+
+    <!-- Actions -->
+    <string name="btn_play">تشغيل</string>
+    <string name="btn_details">التفاصيل</string>
+    <string name="btn_play_episode_1">تشغيل الحلقة 1 (38:14)</string>
+    <string name="btn_download_season">تنزيل الموسم 1</string>
+    <string name="btn_done">تم</string>
+    <string name="action_my_list">المحفوظات</string>
+    <string name="action_info">معلومات</string>
+    <string name="action_download">تنزيل</string>
+    <string name="action_rate">تقييم</string>
+    <string name="action_see_all">عرض الكل</string>
+    <string name="action_explore_all">استكشف الكل</string>
+    <string name="player_next_episode">الحلقة التالية</string>
+
+    <!-- Home Sections -->
+    <string name="section_continue_watching">متابعة المشاهدة</string>
+    <string name="section_trending_now">الأكثر رواجاً في السينما الواقعية</string>
+    <string name="section_spatial_audio">صالة الصوت المكاني 360°</string>
+    <string name="section_because_you_watched">لأنك شاهدت ستيلار دريفت</string>
+
+    <!-- Explore & Search -->
+    <string name="search_title">البحث في العوالم السينمائية</string>
+    <string name="search_subtitle">ابحث عن إصدارات 4K و8K ودولبي أتموس والصوت المكاني</string>
+    <string name="search_placeholder">ابحث عن العناوين، الممثلين، العوالم…</string>
+    <string name="search_trending_queries">عمليات البحث الشائعة</string>
+    <string name="explore_curated_genres">التصنيفات والمشاهد الصوتية المختارة</string>
+
+    <!-- Details -->
+    <string name="tab_episodes">الحلقات</string>
+    <string name="tab_more_like_this">أعمال مشابهة</string>
+    <string name="tab_trailers_extras">الإعلانات والمقاطع الإضافية</string>
+    <string name="cast_and_crew">طاقم العمل والممثلين</string>
+
+    <!-- Spatial Lounge -->
+    <string name="spatial_lounge_title">صالة الصوت المكاني</string>
+    <string name="spatial_lounge_subtitle">مؤثرات دولبي أتموس 360° غامرة واستماع مباشر</string>
+
+    <!-- My Space & Profile -->
+    <string name="section_offline_vault">الخزنة المكانية وبدون اتصال</string>
+    <string name="section_saved_universes">العوالم المحفوظة</string>
+
+    <!-- Quick Settings Dialog -->
+    <string name="quick_settings_title">اللغة والمظهر</string>
+    <string name="tab_language">اللغة</string>
+    <string name="tab_theme">المظهر</string>
+    <string name="choose_language_desc">اختر لغتك المفضلة. يتم دعم اتجاه اليمين إلى اليسار (RTL) تلقائياً.</string>
+    <string name="choose_theme_desc">اختر مظهرك المفضل.</string>
+    <string name="theme_dark">سينمائي داكن (حجر السج)</string>
+    <string name="theme_light">مكاني فاتح (كوارتز)</string>
+    <string name="theme_system">تلقائي حسب النظام</string>
+
+    <!-- Widgets Showcase & Metadata -->
+    <string name="widgets_showcase_title">ودجات الشاشة الرئيسية متعددة الأحجام</string>
+    <string name="widgets_showcase_subtitle">معاينة ودجات السينما الصغيرة (2x2) والمتوسطة (4x2) والكبيرة (4x4)</string>
+    <string name="widget_size_small">صغير (2×2) استئناف سريع مدمج</string>
+    <string name="widget_size_medium">متوسط (4×2) التشغيل الحالي والتقدم</string>
+    <string name="widget_size_large">كبير (4×4) مركز السينما والمختارات</string>
+</resources>

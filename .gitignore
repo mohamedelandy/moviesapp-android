@@ -1,0 +1,40 @@
+*.iml
+.gradle
+.kotlin
+/local.properties
+.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+.env
+.env.*
+!.env.example
+
+# Signing material. The release config in app/build.gradle.kts looks for
+# ${rootDir}/my-upload-key.jks, so a keygen run in the project root would
+# otherwise be committed.
+debug.keystore
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.aab
+*.apk
+*.mobileprovision
+*.p8
+google-services.json
+firebase-analytics.properties
+firebase-appcheck-debug*
+
+# Roborazzi golden screenshots are regenerated locally.
+app/src/test/screenshots/
+
+# JVM crash dumps
+hs_err_pid*
+replay_pid*
+*.hprof

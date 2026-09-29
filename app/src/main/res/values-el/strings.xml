@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Movies App Showcase</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Αρχική</string>
+    <string name="nav_explore">Εξερεύνηση</string>
+    <string name="nav_spatial">Χωρικός Ήχος</string>
+    <string name="nav_downloads">Λήψεις</string>
+    <string name="nav_myspace">Ο Χώρος μου</string>
+
+    <!-- Actions -->
+    <string name="btn_play">Αναπαραγωγή</string>
+    <string name="btn_details">Λεπτομέρειες</string>
+    <string name="btn_play_episode_1">Αναπαραγωγή Επ. 1 (38:14)</string>
+    <string name="btn_download_season">Λήψη Σεζόν 1</string>
+    <string name="btn_done">Τέλος</string>
+    <string name="action_my_list">Αποθηκευμένα</string>
+    <string name="action_info">Πληροφορίες</string>
+    <string name="action_download">Λήψη</string>
+    <string name="action_rate">Αξιολόγηση</string>
+    <string name="action_see_all">Προβολή όλων</string>
+    <string name="action_explore_all">Εξερεύνηση όλων</string>
+    <string name="player_next_episode">Επόμενο Επεισόδιο</string>
+
+    <!-- Home Sections -->
+    <string name="section_continue_watching">ΣΥΝΕΧΙΣΤΕ ΤΗΝ ΠΡΟΒΟΛΗ</string>
+    <string name="section_trending_now">ΔΥΝΑΤΑ ΣΤΟΝ ΧΩΡΙΚΟ ΚΙΝΗΜΑΤΟΓΡΑΦΟ</string>
+    <string name="section_spatial_audio">ΑΙΘΟΥΣΑ ΧΩΡΙΚΟΥ ΗΧΟΥ 360°</string>
+    <string name="section_because_you_watched">ΕΠΕΙΔΗ ΕΙΔΑΤΕ ΤΟ STELLAR DRIFT</string>
+
+    <!-- Explore & Search -->
+    <string name="search_title">Αναζήτηση Πραγματικοτήτων</string>
+    <string name="search_subtitle">Βρείτε 4K, 8K, Dolby Atmos και Spatial Master κομμάτια</string>
+    <string name="search_placeholder">Αναζήτηση τίτλων, ηθοποιών, κόσμων…</string>
+    <string name="search_trending_queries">ΔΗΜΟΦΙΛΕΙΣ ΑΝΑΖΗΤΗΣΕΙΣ</string>
+    <string name="explore_curated_genres">ΕΠΙΛΕΓΜΕΝΑ ΕΙΔΗ &amp; ΗΧΟΤΟΠΙΑ</string>
+
+    <!-- Details -->
+    <string name="tab_episodes">Επεισόδια</string>
+    <string name="tab_more_like_this">Παρόμοια Έργα</string>
+    <string name="tab_trailers_extras">Τρέιλερ &amp; Έξτρα</string>
+    <string name="cast_and_crew">ΗΘΟΠΟΙΟΙ &amp; ΣΥΝΤΕΛΕΣΤΕΣ</string>
+
+    <!-- Spatial Lounge -->
+    <string name="spatial_lounge_title">Αίθουσα Χωρικού Ήχου</string>
+    <string name="spatial_lounge_subtitle">Καθηλωτικός ήχος 360° Dolby Atmos και ζωντανή ακρόαση</string>
+
+    <!-- My Space & Profile -->
+    <string name="section_offline_vault">ΧΩΡΙΚΗ &amp; OFFLINE ΘΥΡΙΔΑ</string>
+    <string name="section_saved_universes">ΑΠΟΘΗΚΕΥΜΕΝΑ ΣΥΜΠΑΝΤΑ</string>
+
+    <!-- Quick Settings Dialog -->
+    <string name="quick_settings_title">Γλώσσα &amp; Εμφάνιση</string>
+    <string name="tab_language">Γλώσσα</string>
+    <string name="tab_theme">Θέμα</string>
+    <string name="choose_language_desc">Επιλέξτε τη γλώσσα σας. Υποστηρίζεται αυτόματη διάταξη RTL και LTR.</string>
+    <string name="choose_theme_desc">Επιλέξτε την εμφάνιση που προτιμάτε.</string>
+    <string name="theme_dark">Σκοτεινό Κινηματογραφικό (Οψιδιανός)</string>
+    <string name="theme_light">Φωτεινό Χωρικό (Χαλαζίας)</string>
+    <string name="theme_system">Προεπιλογή συστήματος</string>
+
+    <!-- Widgets Showcase & Metadata -->
+    <string name="widgets_showcase_title">Γραφικά Στοιχεία Πολλαπλών Μεγεθών</string>
+    <string name="widgets_showcase_subtitle">Προεπισκόπηση μικρών (2x2), μεσαίων (4x2) και μεγάλων (4x4) widgets</string>
+    <string name="widget_size_small">Μικρό (2×2) Συμπαγές Γρήγορης Συνέχειας</string>
+    <string name="widget_size_medium">Μεσαίο (4×2) Τώρα Παίζει &amp; Πρόοδος</string>
+    <string name="widget_size_large">Μεγάλο (4×4) Κέντρο Σινεμά &amp; Επιλογές</string>
+</resources>

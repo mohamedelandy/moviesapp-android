@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Movies App Showcase</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_spatial">Spatial Lounge</string>
+    <string name="nav_downloads">Downloads</string>
+    <string name="nav_myspace">My Space</string>
+
+    <!-- Actions -->
+    <string name="btn_play">Play</string>
+    <string name="btn_details">Details</string>
+    <string name="btn_play_episode_1">Play Episode 1 (38:14)</string>
+    <string name="btn_download_season">Download S1</string>
+    <string name="btn_done">Done</string>
+    <string name="action_my_list">Saved</string>
+    <string name="action_info">Info</string>
+    <string name="action_download">Download</string>
+    <string name="action_rate">Rate</string>
+    <string name="action_see_all">See All</string>
+    <string name="action_explore_all">Explore All</string>
+    <string name="player_next_episode">Next Episode</string>
+
+    <!-- Home Sections -->
+    <string name="section_continue_watching">CONTINUE WATCHING</string>
+    <string name="section_trending_now">TRENDING IN REALITY CINEMA</string>
+    <string name="section_spatial_audio">SPATIAL AUDIO LOUNGE</string>
+    <string name="section_because_you_watched">BECAUSE YOU WATCHED STELLAR DRIFT</string>
+
+    <!-- Explore & Search -->
+    <string name="search_title">Search Realities</string>
+    <string name="search_subtitle">Find 4K, 8K, Dolby Atmos, and Spatial Master tracks</string>
+    <string name="search_placeholder">Search titles, actors, spatial worlds…</string>
+    <string name="search_trending_queries">TRENDING SEARCHES</string>
+    <string name="explore_curated_genres">CURATED GENRES &amp; SOUNDSCAPES</string>
+
+    <!-- Details -->
+    <string name="tab_episodes">Episodes</string>
+    <string name="tab_more_like_this">More Like This</string>
+    <string name="tab_trailers_extras">Trailers &amp; Extras</string>
+    <string name="cast_and_crew">CAST &amp; CREW</string>
+
+    <!-- Spatial Lounge -->
+    <string name="spatial_lounge_title">Spatial Audio Lounge</string>
+    <string name="spatial_lounge_subtitle">Immersive 360° Dolby Atmos soundscapes and live audition</string>
+
+    <!-- My Space & Profile -->
+    <string name="section_offline_vault">OFFLINE &amp; SPATIAL VAULT</string>
+    <string name="section_saved_universes">SAVED UNIVERSES</string>
+
+    <!-- Quick Settings Dialog -->
+    <string name="quick_settings_title">Language &amp; Theme Mode</string>
+    <string name="tab_language">Language</string>
+    <string name="tab_theme">Theme</string>
+    <string name="choose_language_desc">Select your language. RTL (Right-to-Left) layout is automatically supported.</string>
+    <string name="choose_theme_desc">Choose your visual appearance preference.</string>
+    <string name="theme_dark">Cinematic Dark (Obsidian)</string>
+    <string name="theme_light">Spatial Light (Quartz)</string>
+    <string name="theme_system">System Default</string>
+
+    <!-- Widgets Showcase & Metadata -->
+    <string name="widgets_showcase_title">Multi-Size Home Widgets</string>
+    <string name="widgets_showcase_subtitle">Preview Small (2x2), Medium (4x2), and Large (4x4) cinema widgets</string>
+    <string name="widget_size_small">Small (2×2) Compact Quick Resume</string>
+    <string name="widget_size_medium">Medium (4×2) Now Playing &amp; Progress</string>
+    <string name="widget_size_large">Large (4×4) Cinema Hub &amp; Recent Picks</string>
+    <string name="permission_bind_app_functions">Allow the app to expose its assistant actions</string>
+</resources>
