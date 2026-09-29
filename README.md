@@ -23,14 +23,14 @@
 
 | | |
 |:---|:---|
-| 🪐 **Immersive Discovery** | Dynamic Compose UI with holographic rank cards, spatial audio cards & animated equalizer wave bars |
-| 📺 **Multi-Size App Widgets** | 2×2 quick-resume, 4×2 now-playing with progress bar, and 4×4 cinema hub — built on `AppWidgetProvider` + `RemoteViews` |
-| ▶️ **Media Playback** | Media3 / ExoPlayer with a public CC-BY sample stream as a stand-in for licensed content |
-| 📡 **Google Cast** | Cast integration with a custom `OptionsProvider`, expanded controller & media notifications |
-| 🤖 **AI Agent-Ready** | `AppFunctions` service (signature-protected) exposing watchlist & playback actions to on-device assistants |
-| 🌍 **i18n + RTL** | Localized in 🇬🇧 🇸🇦 🇬🇷 with automatic RTL layout support |
-| 🌗 **Theming** | Cinematic Dark / Spatial Light / System — with quick language & theme dialog |
-| 🔔 **Predictive Back** | NavigationEvent integration for modern back-gesture animations |
+| 🪐 **Immersive Discovery** | Dynamic Compose UI with holographic rank cards (`HolographicRankCard`), spatial audio cards (`SpatialAudioCard`) & animated equalizer wave bars (`EqualizerWaveBar`) |
+| 📺 **Multi-Size App Widgets** | 2×2 quick-resume, 4×2 now-playing with progress bar, and 4×4 cinema hub — built on `AppWidgetProvider` + `RemoteViews` layouts |
+| ▶️ **Media Playback** | Media3 / ExoPlayer 1.5.1 with playback speed controls (0.5x–2.0x), audio spec indicators, and a public CC-BY sample stream as a stand-in for licensed content |
+| 📡 **Google Cast** | Cast integration via Media3 Cast (`CastPlayer`) with a custom `CastOptionsProvider` and seamless remote session handoff |
+| 🤖 **AI Agent-Ready** | Android `AppFunctions` service (`MoviesAppFunctionService`) with signature-level permission protection (`BIND_APP_FUNCTIONS`), exposing search, watchlist & playback actions to on-device assistants |
+| 🌍 **Localization & RTL** | Native Android string resources (`res/values`, `res/values-ar`, `res/values-el`) supporting English 🇬🇧, Arabic 🇸🇦 (with dynamic RTL layout mirroring via `CompositionLocalProvider`), and Greek 🇬🇷 |
+| 🌗 **Theming** | Cinematic Dark (Obsidian) / Spatial Light (Quartz) / System default — backed by Room database preferences and a quick language & theme dialog |
+| 🔔 **Predictive Back** | Jetpack Compose `PredictiveBackHandler` integration with gesture progress tracking for smooth back navigation |
 
 ## 📸 Screenshots
 
@@ -58,45 +58,58 @@ flowchart LR
 ```
 
 ```
-app/src/main/java/com/nady/moviesapp/
-├── 🚀 MainActivity.kt
-├── 📡 cast/                  # Google Cast setup
-├── 🗄 data/
-│   ├── datasource/           # Static movie catalog
-│   ├── local/                # Room DB, DAOs, entities
-│   └── repository/           # Repository implementations
-├── 💎 domain/
-│   ├── agent/                # AppFunctions AI service
-│   ├── model/                # Pure Kotlin models
-│   ├── repository/           # Interfaces
-│   └── usecase/              # Single-responsibility use cases
-├── 🖥 presentation/
-│   ├── components/           # Reusable Compose components
-│   ├── navigation/           # Route definitions
-│   ├── screens/              # Home, Explore, Details, Player, Spatial, MySpace
-│   └── viewmodel/            # ViewModels + factory
-├── 🎨 ui/theme/              # Colors, typography, themes
-└── 📺 widget/                # 2x2, 4x2, 4x4 App Widgets
+app/src/main/
+├── AndroidManifest.xml       # Permissions, CastOptionsProvider, AppFunctions, Widgets
+├── java/com/nady/moviesapp/
+│   ├── 🚀 MainActivity.kt    # Single activity, edge-to-edge, RTL composition, NavHost
+│   ├── 📡 cast/              # CastOptionsProvider (Media3 Cast setup)
+│   ├── 🗄 data/
+│   │   ├── datasource/       # Static movie catalog & user profiles (offline-first)
+│   │   ├── local/            # Room DB (AppDatabase, MovieDao, AppSettingEntity)
+│   │   └── repository/       # Movie, Downloads & UserPreferences implementations
+│   ├── 💎 domain/
+│   │   ├── agent/            # MoviesAppFunctions & MoviesAppFunctionService (AppFunctions)
+│   │   ├── model/            # Pure Kotlin domain models (Movie, Episode, AppSettings, Resource)
+│   │   ├── repository/       # Repository domain interfaces
+│   │   └── usecase/          # Single-responsibility use cases
+│   ├── 🖥 presentation/
+│   │   ├── components/       # HolographicRankCard, SpatialAudioCard, EqualizerWaveBar, LiquidBottomDock, LocalAsyncImage, LanguageThemeDialog, WidgetsModal
+│   │   ├── navigation/       # Screen sealed class routes (Home, Explore, Spatial, MySpace, Details, Player, WidgetsShowcase)
+│   │   ├── screens/          # HomeScreen, ExploreScreen, MovieDetailsScreen, PlayerScreen, SpatialLoungeScreen, MySpaceScreen
+│   │   └── viewmodel/        # Home, Explore, Details, Player, MySpace, AppTheme ViewModels + ViewModelFactory
+│   ├── 🎨 ui/theme/          # BrandAccent, SpatialColors, Material 3 Typography & Theme
+│   └── 📺 widget/            # MoviesSmallWidget (2x2), MoviesMediumWidget (4x2), MoviesLargeWidget (4x4)
+└── res/
+    ├── drawable-nodpi/       # Bundled high-res offline movie posters, backdrops & covers
+    ├── layout/               # App widget RemoteViews XML layouts
+    ├── values/               # Default strings (en) and base theme
+    ├── values-ar/            # Arabic localized strings (RTL)
+    ├── values-el/            # Greek localized strings
+    └── xml/                  # AppWidgetProviderInfo XML definitions
 ```
 
 ## 🧰 Tech Stack
 
 | Layer | Tools |
 |:---|:---|
-| **UI** | Jetpack Compose, Material 3, Compose BOM, Navigation Compose |
-| **Persistence** | Room 2.7 (KSP codegen) |
-| **Media** | Media3 / ExoPlayer, Media3 Cast |
-| **Networking** | Retrofit, OkHttp, Moshi (KSP codegen) *(declared for future use)* |
-| **AI / Cloud** | Firebase AI, Firebase App Check *(ready to wire)* |
+| **UI** | Jetpack Compose (2024.09.00 BOM), Material 3, Navigation Compose, Compose Animation |
+| **Concurrency** | Kotlin Coroutines 1.10.2, StateFlow, Flow |
+| **Persistence** | Room 2.7.0 (SQLite DAO with KSP code generation) |
+| **Images** | Coil 2.7.0 (`LocalAsyncImage` with bundled offline-first asset resolver & network fallback) |
+| **Media Playback** | Media3 / ExoPlayer 1.5.1, Media3 UI, Media3 Common |
+| **Casting** | Media3 Cast 1.5.1 (`CastPlayer`, `CastOptionsProvider`) |
+| **Widgets** | AppWidgetProvider, RemoteViews (Small 2×2, Medium 4×2, Large 4×4) |
+| **AI / Assistant** | Android AppFunctions (`MoviesAppFunctionService` signature-protected) |
+| **System / Gestures** | Edge-to-Edge (`enableEdgeToEdge`), Predictive Back (`PredictiveBackHandler`) |
 | **DI** | Manual constructor injection via `ViewModelFactory` |
-| **Testing** | JUnit4, Robolectric, Roborazzi screenshot tests, Compose UI Test |
+| **Testing** | JUnit 4.13.2, Robolectric 4.16.1, Roborazzi 1.59.0 (screenshot tests), Compose UI Test |
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Android Studio** Narwhal or newer (AGP 9.x support)
-- **JDK 17+**
+- **Android Studio** Narwhal or newer (with AGP 9.x support)
+- **JDK 17+** (or Android Studio's bundled JBR)
 
 ### Setup
 
@@ -117,17 +130,17 @@ cd moviesapp-android
 <summary>🛠 Or build from the command line</summary>
 
 ```bash
-./gradlew :app:assembleDebug      # build APK
-./gradlew :app:testDebugUnitTest  # unit + Robolectric tests
+./gradlew assembleDebug      # build debug APK
+./gradlew testDebugUnitTest  # unit + Robolectric + Roborazzi screenshot tests
 ```
 </details>
 
 ## 🧪 Testing
 
-The codebase is structured for high testability — pure domain layer, injected repositories, and Robolectric for JVM-side Android tests.
+The codebase is structured for high testability — pure domain layer, injected repositories, and Robolectric for JVM-side Android tests:
 
 ```bash
-./gradlew testDebugUnitTest         # Unit + Robolectric + screenshot tests
+./gradlew testDebugUnitTest         # Unit + Robolectric + Roborazzi screenshot tests
 ./gradlew connectedDebugAndroidTest # Instrumented & E2E tests
 ```
 
